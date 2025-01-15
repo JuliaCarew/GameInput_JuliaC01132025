@@ -7,9 +7,11 @@ public class blockAction : MonoBehaviour
     private void OnEnable()
     {        
         ActionManager.OnCrouchStarted += BlockAction;
+        ActionManager.OnCrouchCancelled += BlockActionEnd;
     }
     private void OnDisable()
     {
+        ActionManager.OnCrouchStarted -= BlockAction;
         ActionManager.OnCrouchCancelled -= BlockActionEnd;
     }
     

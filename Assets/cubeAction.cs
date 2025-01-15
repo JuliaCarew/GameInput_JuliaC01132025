@@ -10,7 +10,7 @@ public class cubeAction : MonoBehaviour
     }
     private void OnDisable()
     {
-        ActionManager.OnInteractCancelled -= CubeAction;
+        ActionManager.OnInteractStarted -= CubeAction;
     }
     // cube turns green with T input
     private void CubeAction()
